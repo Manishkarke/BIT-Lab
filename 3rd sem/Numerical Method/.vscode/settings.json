@@ -1,0 +1,13 @@
+{
+  "files.associations": {
+    "array": "c",
+    "bitset": "c",
+    "string_view": "c",
+    "hash_map": "c",
+    "hash_set": "c",
+    "format": "c",
+    "initializer_list": "c",
+    "span": "c",
+    "valarray": "c"
+  }
+}
