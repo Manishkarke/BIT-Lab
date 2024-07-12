@@ -1,0 +1,1 @@
+// Lab 24: C program to To solve Partial Differential Equations method using Laplace's equation method

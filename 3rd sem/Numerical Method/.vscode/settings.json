@@ -8,6 +8,10 @@
     "format": "c",
     "initializer_list": "c",
     "span": "c",
-    "valarray": "c"
+    "valarray": "c",
+    "random": "c",
+    "string": "c",
+    "chrono": "c",
+    "functional": "c"
   }
 }
