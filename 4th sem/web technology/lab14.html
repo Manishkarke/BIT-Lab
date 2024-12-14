@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <h1>Form Validation</h1>
+
+    <form onsubmit="handleSubmission(event)">
+      <div class="inputfield">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" />
+        <span id="nameErr"></span>
+      </div>
+      <div class="inputfield">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" />
+        <span id="emailErr"></span>
+      </div>
+      <div class="inputfield">
+        <label for="password">password</label>
+        <input type="password" name="password" id="password" />
+        <span id="passwordErr"></span>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      function handleSubmission(e) {
+        e.preventDefault();
+        const data = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          password: document.getElementById("password").value,
+        };
+
+        const nameErr = document.getElementById("nameErr");
+        const emailErr = document.getElementById("emailErr");
+        const passwordErr = document.getElementById("passwordErr");
+
+        let errors = validateData(data);
+        let isFormInvalid = Object.keys(errors).some(
+          (key) => errors[key] !== ""
+        );
+
+        if (isFormInvalid) {
+          nameErr.innerText = errors?.name || "";
+          emailErr.innerText = errors?.email || "";
+          passwordErr.innerText = errors?.password || "";
+        } else {
+          alert("Form is submitted");
+          nameErr.innerText = "";
+          emailErr.innerText = "";
+          passwordErr.innerText = "";
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("password").value = "";
+        }
+      }
+
+      function validateData({ name, email, password }) {
+        let errors = {};
+
+        if (!name || !name.trim()) {
+          errors.name = "Name is required";
+        } else if (/\d/.test(name)) {
+          errors.name = "Name cannot contain any digit";
+        }
+
+        if (!email || !email.trim()) {
+          errors.email = "Email is required";
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          errors.email = "Email is invalid";
+        }
+
+        if (!password || !password.trim()) {
+          errors.password = "Password is required";
+        } else if (
+          !(
+            /\d/.test(password) &&
+            /[a-z]/.test(password) &&
+            /[A-Z]/.test(password)
+          )
+        ) {
+          errors.password =
+            "Password must contains atleast one uppercase, one lowercase and a digit";
+        } else if (password.length < 8) {
+          errors.password = "Password must be of atleast 8 characters.";
+        }
+        return errors;
+      }
+    </script>
+  </body>
+</html>

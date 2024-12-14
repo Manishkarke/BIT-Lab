@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 07</title>
+
+    <style>
+      table {
+        width: 500px;
+        border-collapse: collapse;
+      }
+
+      td:first-child {
+        width: 60%;
+        padding: 0.5em;
+      }
+      input {
+        padding: 0.75em;
+      }
+
+      textarea {
+        resize: none;
+        overflow: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <table border="2px solid">
+      <tr>
+        <td>Name</td>
+        <td><input type="text" name="name" id="name" /></td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td><textarea name="address" id="address"></textarea></td>
+      </tr>
+      <tr>
+        <td>Date of birth</td>
+        <td><input type="date" name="dob" id="dob" /></td>
+      </tr>
+      <tr>
+        <td>Age</td>
+        <td><input type="number" name="age" id="age" /></td>
+      </tr>
+      <tr>
+        <td>Type of student</td>
+        <td>
+          <input type="radio" name="type" id="new" />
+          <label for="new">New</label>
+          <input type="radio" name="type" id="old" />
+          <label for="old">Old</label>
+        </td>
+      </tr>
+      <tr>
+        <td>Parent's name</td>
+        <td><input type="text" name="parentName" id="parentName" /></td>
+      </tr>
+      <tr>
+        <td>Qualification</td>
+        <td><input type="text" name="qualification" id="qualification" /></td>
+      </tr>
+      <tr>
+        <td>Occupation</td>
+        <td><input type="text" name="occupation" id="occupation" /></td>
+      </tr>
+      <tr>
+        <td>Telephone's number</td>
+        <td><input type="tel" name="telephone" id="telephone"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="center">
+          <input type="submit" value="submit" />
+          <input type="reset" value="reset" />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

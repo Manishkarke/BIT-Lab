@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>factorial problem</title>
+  </head>
+  <body>
+    <h1>Calculate factorial</h1>
+
+    <label for="number">Number: </label>
+    <input type="number" name="num" id="number" />
+
+    <button type="button" onclick="calculateFactorial()">Calculate</button>
+    <br />
+    <hr />
+    <div id="result">result here</div>
+
+    <script>
+      function calculateFactorial() {
+        const num = Number(document.getElementById("number").value);
+
+        document.getElementById("result").innerText =
+          "factorial of " + num + " is " + factorial(num);
+      }
+
+      function factorial(num) {
+        if (num === 0 || num === 1) {
+          return 1;
+        } else {
+          return num * factorial(num - 1);
+        }
+      }
+    </script>
+  </body>
+</html>

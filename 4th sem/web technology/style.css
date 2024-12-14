@@ -1,0 +1,18 @@
+.box {
+  box-sizing: border-box;
+
+  width: 400px;
+  margin: auto;
+  aspect-ratio: 1/1;
+  border: 1px solid;
+  display: grid;
+  place-content: center;
+  border-radius: 20px;
+  background-color: #132faa;
+}
+
+.box p {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #dfdfdf;
+}

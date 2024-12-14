@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Largest number among numbers</title>
+  </head>
+  <body>
+    <h1>Largest number among given numbers</h1>
+    <p>Enter any numbers seperated with ","</p>
+    <label for="num">Number</label>
+    <input type="text" name="nums" id="nums" />
+
+    <button onclick="findGreatest()" type="button">find greatest</button>
+
+    <hr />
+    <br />
+    <div id="result"></div>
+
+    <script>
+      function findGreatest() {
+        const numbers = document.getElementById("nums").value.split(",");
+
+        let greatestNum = Number(numbers[0]);
+
+        for (let i = 1; i < numbers.length; i++) {
+          if (Number(numbers[i]) > greatestNum) {
+            greatestNum = Number(numbers[i]);
+          }
+        }
+
+        document.getElementById("result").innerText =
+          greatestNum + " is the greatest number among all numbers.";
+      }
+    </script>
+  </body>
+</html>
