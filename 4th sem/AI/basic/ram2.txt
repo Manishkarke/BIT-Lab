@@ -1,0 +1,1 @@
+Hello this is content of ram.txt

@@ -1,0 +1,1 @@
+# WAP to remove a given word from a list strip it at the same time
