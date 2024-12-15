@@ -5,7 +5,7 @@ def compareFile(f1Name, f2Name):
         with open(f1Name, 'r') as f1, open(f2Name, 'r') as f2:
             content1 = f1.read()
             content2 = f2.read()
-        
+        print(f"content of {f1Name}: {content1}\ncontent of {f2Name}: {content2}\n")
         if(content1 == content2):
             print("Both files are identical.")
         else:

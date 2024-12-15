@@ -3,6 +3,7 @@ def findWord(fileName, word):
     try:
         with open(fileName, "r") as file:
             content = file.read()
+            print(f"{fileName} content: {content}")
             if(word.lower() in content.lower()):
                 print("Yes, The file contains the word twinkle")
             else:

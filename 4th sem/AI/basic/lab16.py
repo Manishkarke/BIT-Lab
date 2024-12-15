@@ -1,5 +1,4 @@
 # wap that make a copy of text file "ram.txt"
-
 def makeACopy(currentFile, newFile):
     try:
         with open(currentFile, 'r') as file:
