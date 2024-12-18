@@ -6,7 +6,6 @@
     <title>Lab 10</title>
   </head>
   <body>
-    <h1>Sum of five consecutive numbers</h1>
 
     <div id="result"></div>
 
@@ -22,7 +21,7 @@
         count++
       } while(count <= 5)
 
-      console.log(sum)
+      document.getElementById("result").innerText = `Result of sum of 5 consecutive number of ${num} is ${sum}`
     </script>
   </body>
 </html>

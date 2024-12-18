@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form Validation</title>
+    <title>Lab 14</title>
+
+    <style>
+      .err {
+        color: red;
+      }
+    </style>
   </head>
   <body>
     <h1>Form Validation</h1>
@@ -12,17 +18,17 @@
       <div class="inputfield">
         <label for="name">Name</label>
         <input type="text" name="name" id="name" />
-        <span id="nameErr"></span>
+        <span class="err" id="nameErr"></span>
       </div>
       <div class="inputfield">
         <label for="email">Email</label>
         <input type="email" name="email" id="email" />
-        <span id="emailErr"></span>
+        <span class="err" id="emailErr"></span>
       </div>
       <div class="inputfield">
         <label for="password">password</label>
         <input type="password" name="password" id="password" />
-        <span id="passwordErr"></span>
+        <span class="err" id="passwordErr"></span>
       </div>
 
       <button type="submit">Submit</button>
